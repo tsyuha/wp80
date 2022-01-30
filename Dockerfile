@@ -9,7 +9,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 # Installing Apache
 
-RUN apt-get install -y apache2 mc php mysql-server php-mysqlnd && rm -f /etc/apache2/sites-enabled/000-default.conf
+RUN apt-get install -y apache2 php mysql-server php-mysqlnd && rm -f /etc/apache2/sites-enabled/000-default.conf
 COPY httpd.conf /etc/apache2/sites-enabled/000-default.conf
 
 RUN a2enmod actions && a2enmod headers && a2enmod rewrite && a2enmod cgid
