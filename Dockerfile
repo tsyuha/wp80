@@ -1,6 +1,5 @@
 FROM ubuntu:20.04
 
-
 # clean and update sources
 RUN apt-get clean && apt-get update
 
