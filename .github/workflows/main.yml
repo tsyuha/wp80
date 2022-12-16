@@ -8,14 +8,14 @@ on:
 jobs:
 
   my-testing:
-    runs-on: ubuntu:22.04
+    runs-on: ubuntu-22.04
     
     steps:
     - name: Print Hello Message
       run: echo "Hello world from Testing!"
       
   my-deployment:
-    runs-on: ubuntu:22.04
+    runs-on: ubuntu-22.04
     needs: [my-testing]
     
     steps:
