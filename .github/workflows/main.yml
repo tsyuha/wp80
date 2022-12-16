@@ -6,15 +6,18 @@ on:
       - main
 
 jobs:
+
   my-testing:
     runs-on: ubuntu:22.04
     
     steps:
     - name: Print Hello Message
       run: echo "Hello world from Testing!"
+      
   my-deployment:
     runs-on: ubuntu:22.04
-    needs: my-testing
+    needs: [my-testing]
+    
     steps:
     - name: Print Hello Message
       run: echo "Hello world from Deployment!"
