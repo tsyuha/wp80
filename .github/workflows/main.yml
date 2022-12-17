@@ -26,6 +26,12 @@ jobs:
     - name: List current folders
       run: ls -la
       
+    - name: clone to repo
+      uses: actions/checkout@v1
+      
+    - name: List current folders
+      run: ls -la
+      
       
   my-deployment:
     runs-on: ubuntu-22.04
