@@ -1,4 +1,7 @@
 name: CI
+env:
+  APPLICATION_NAME: "tsyuha"
+  DEPLOY_PACKAGE_NAME: "tsuha-${{ github.sha }}"
 
 on:
   push:
@@ -13,6 +16,12 @@ jobs:
     steps:
     - name: Print Hello Message
       run: echo "Hello world from Testing!"
+    - name: "Execute few commands
+      run: |
+        echo "Hello 1"
+        echo "Hello 2"
+        echo "Hello ${{env.DEPLOY_PACKAGE_NAME}}"
+      
       
   my-deployment:
     runs-on: ubuntu-22.04
