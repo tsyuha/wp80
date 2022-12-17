@@ -36,7 +36,10 @@ jobs:
   my-deployment:
     runs-on: ubuntu-22.04
     needs: [my-testing]
-    
+    env: 
+      VAR1: "ts1"
+      VAR2: "ts2"
+      
     steps:
     - name: Print Hello Message
       run: echo "Hello world from Deployment!"
@@ -45,7 +48,10 @@ jobs:
       run: aws --version
       
     - name: a2
-      run: zip
+      run: echo "KUKU ${{ env.VAR1 }}"
+      
+    - name: a3
+      run: zip --version
       
       
     
