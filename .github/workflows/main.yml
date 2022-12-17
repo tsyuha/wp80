@@ -22,6 +22,9 @@ jobs:
         echo "Hello 1"
         echo "Hello 2"
         echo "Hello ${{env.DEPLOY_PACKAGE_NAME}}"
+        
+    - name: List current folders
+      run: ls -la
       
       
   my-deployment:
