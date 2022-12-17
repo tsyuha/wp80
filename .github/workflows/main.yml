@@ -40,5 +40,13 @@ jobs:
     steps:
     - name: Print Hello Message
       run: echo "Hello world from Deployment!"
+      
+    - name: a1
+      run: aws --version
+      
+    - name: a2
+      run: zip
+      
+      
     
       
